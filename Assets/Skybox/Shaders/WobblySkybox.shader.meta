@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: ea31ceeafe103f24abe5c624d296be20
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _WobblySunandMoon: {fileID: 8900000, guid: 1594da2ce7e78274da30391daa337cee, type: 3}
+  - _CloudTexture: {fileID: 8900000, guid: 8d5e8a1df9a71064a9aee8ba34531fb8, type: 3}
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

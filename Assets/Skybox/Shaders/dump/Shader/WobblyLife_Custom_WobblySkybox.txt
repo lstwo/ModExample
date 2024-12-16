@@ -1,0 +1,133 @@
+//////////////////////////////////////////
+//
+// NOTE: This is *not* a valid shader file
+//
+///////////////////////////////////////////
+Shader "WobblyLife/Custom/WobblySkybox" {
+    Properties {
+        _CloudTexture ("CloudTexture", Cube) = "black" { }
+        [IntRange] _Rotation ("Rotation", Range(0, 360)) = 0
+        _RotationSpeed ("Rotation Speed", Float) = 1
+        _Tint ("Tint", Color) = (0.2313726,0.6078432,1,0)
+        _FogFill ("Fog Fill", Range(0, 1)) = 0
+        _CloudBottomGradient ("CloudBottomGradient", Range(0, 1)) = 0.5
+        _SunMoonTexture ("SunMoonTexture", Cube) = "black" { }
+        _FogHeight ("Fog Height", Range(0, 1)) = 1
+        _FogSmoothness ("Fog Smoothness", Range(0.01, 1)) = 0.01
+        _StarsVisibility ("Stars Visibility", Range(0, 1)) = 1
+        _FogOffset ("FogOffset", Float) = 0.02
+        __dirty ("", Float) = 1
+    }
+    SubShader {
+        LOD 100
+        Tags { "FORCENOSHADOWCASTING" = "true" "IGNOREPROJECTOR" = "true" "IsEmissive" = "true" "QUEUE" = "Background+0" "RenderType" = "Background" }
+        Pass {
+            Name "FORWARD"
+            LOD 100
+            Tags { "FORCENOSHADOWCASTING" = "true" "IGNOREPROJECTOR" = "true" "IsEmissive" = "true" "LIGHTMODE" = "FORWARDBASE" "QUEUE" = "Background+0" "RenderType" = "Background" }
+            ZWrite Off
+            GpuProgramID 6661
+            Program "vp" {
+                SubProgram "d3d11 hw_tier00 " {
+                    Keywords { "DIRECTIONAL" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier01 " {
+                    Keywords { "DIRECTIONAL" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier02 " {
+                    Keywords { "DIRECTIONAL" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier00 " {
+                    Keywords { "DIRECTIONAL" "LIGHTPROBE_SH" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier01 " {
+                    Keywords { "DIRECTIONAL" "LIGHTPROBE_SH" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier02 " {
+                    Keywords { "DIRECTIONAL" "LIGHTPROBE_SH" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier00 " {
+                    Keywords { "DIRECTIONAL" "INSTANCING_ON" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier01 " {
+                    Keywords { "DIRECTIONAL" "INSTANCING_ON" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier02 " {
+                    Keywords { "DIRECTIONAL" "INSTANCING_ON" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier00 " {
+                    Keywords { "DIRECTIONAL" "INSTANCING_ON" "LIGHTPROBE_SH" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier01 " {
+                    Keywords { "DIRECTIONAL" "INSTANCING_ON" "LIGHTPROBE_SH" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier02 " {
+                    Keywords { "DIRECTIONAL" "INSTANCING_ON" "LIGHTPROBE_SH" }
+                    "// shader disassembly not supported on DXBC"
+                }
+            }
+            Program "fp" {
+                SubProgram "d3d11 hw_tier00 " {
+                    Keywords { "DIRECTIONAL" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier01 " {
+                    Keywords { "DIRECTIONAL" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier02 " {
+                    Keywords { "DIRECTIONAL" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier00 " {
+                    Keywords { "DIRECTIONAL" "LIGHTPROBE_SH" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier01 " {
+                    Keywords { "DIRECTIONAL" "LIGHTPROBE_SH" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier02 " {
+                    Keywords { "DIRECTIONAL" "LIGHTPROBE_SH" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier00 " {
+                    Keywords { "DIRECTIONAL" "INSTANCING_ON" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier01 " {
+                    Keywords { "DIRECTIONAL" "INSTANCING_ON" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier02 " {
+                    Keywords { "DIRECTIONAL" "INSTANCING_ON" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier00 " {
+                    Keywords { "DIRECTIONAL" "INSTANCING_ON" "LIGHTPROBE_SH" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier01 " {
+                    Keywords { "DIRECTIONAL" "INSTANCING_ON" "LIGHTPROBE_SH" }
+                    "// shader disassembly not supported on DXBC"
+                }
+                SubProgram "d3d11 hw_tier02 " {
+                    Keywords { "DIRECTIONAL" "INSTANCING_ON" "LIGHTPROBE_SH" }
+                    "// shader disassembly not supported on DXBC"
+                }
+            }
+        }
+    }
+CustomEditor "ASEMaterialInspector"
+}
